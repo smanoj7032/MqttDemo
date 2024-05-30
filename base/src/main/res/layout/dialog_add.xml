@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_20sdp"
+    android:background="@drawable/oval_marker"
+    android:backgroundTint="@color/white">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_marker"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Add Machine"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/l_lay_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_machine"
+            style="@style/EditTextStroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:hint="Enter machine id"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_reference"
+            style="@style/EditTextStroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter reference id"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_low_limit_current"
+            style="@style/EditTextStroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lower limit of current"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_up_limit_current"
+            style="@style/EditTextStroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Upper limit of current"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_lower_limit_volt"
+            style="@style/EditTextStroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lower limit of voltage"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_up_limit_volt"
+            style="@style/EditTextStroke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Upper limit of voltage"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:constraint_referenced_ids="btn_cancel,btn_ok"
+        app:flow_horizontalGap="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_lay_field" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        style="@style/ButtonStroke"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok"
+        style="@style/ButtonSolid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
